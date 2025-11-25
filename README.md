@@ -50,3 +50,9 @@ This repository contains the full classical prototype that backs the paper:
           │    Vault Node      │
           │ 10.255.65.149      │
           └────────────────────┘
+
+Entangle A – authoritative, on Windows A (but content controlled)
+
+Entangle B – attacker-facing replica on Ubuntu A
+
+Vault – original file safely stored on Ubuntu B
