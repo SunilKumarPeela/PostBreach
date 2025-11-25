@@ -56,3 +56,38 @@ Entangle A – authoritative, on Windows A (but content controlled)
 Entangle B – attacker-facing replica on Ubuntu A
 
 Vault – original file safely stored on Ubuntu B
+```
+
+---
+
+# ⚙️ EntangleX – Complete Setup Guide
+
+This guide walks through deploying the full EntangleX prototype across:
+
+- **Windows A** – Client endpoint where sensitive files reside  
+- **Ubuntu A** – Core Server + Entangle B Watcher  
+- **Ubuntu B** – Secure Vault Node (one-way storage)  
+
+---
+
+## 🖥️ 1. Ubuntu A — Core Server Setup
+
+Clone the repository, then:
+
+```bash
+cd server
+python3 -m venv venv
+source venv/bin/activate
+python entanglex_core_server.py
+
+```
+🔗 Default Bind Address
+http://0.0.0.0:5000
+
+📊 Dashboard URL
+http://<Ubuntu-A-IP>:5000/dashboard
+
+Example (your deployment):
+http://10.255.84.134:5000/dashboard
+
+
