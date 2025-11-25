@@ -116,3 +116,35 @@ Pushes updates to:
 POST /update_from_b
 ```
 
+---
+
+### 🔐 3. Ubuntu B — Vault Node Setup
+
+Create the secure vault directory:
+```
+sudo mkdir -p /srv/entangle-vault
+sudo chown vaultbot:vaultbot /srv/entangle-vault
+```
+🔑 Configure One-Way SSH (Ubuntu A → Ubuntu B)
+
+Ensure Ubuntu A can securely push files into the vault:
+```
+ssh -i ~/.ssh/entangle_b_key vaultbot@10.255.65.149
+
+```
+✔️ This is required for pushing the original sensitive file into the encrypted vault.
+---
+### 🪟 4. Windows A — Double-Click Activation
+
+Copy the entire windows/ folder into:
+```
+C:\Entangle\
+```
+
+Set Open-Entangle-Double.bat as the default “Open with” handler for your file type:
+
+Example:
+Right-click → Open With → Choose Another App → Browse… →
+select:
+
+C:\Entangle\Open-Entangle-Double.bat
