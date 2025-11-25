@@ -90,4 +90,29 @@ http://<Ubuntu-A-IP>:5000/dashboard
 Example (your deployment):
 http://10.255.84.134:5000/dashboard
 
+---
+
+### 🔁 2. Ubuntu A — Entangle B Watcher
+
+The watcher syncs modifications from Entangle B → Entangle A → Windows A.
+
+Start it using the same virtual environment:
+
+```bash
+cd watcher
+source ../server/venv/bin/activate
+python entanglex_b_watcher.py
+```
+🧠 Watcher Responsibilities
+
+Monitors: ~/entangler/repo/B
+
+Detects changes to: *_B.*
+
+Debounces rapid edits (VSCode, nano, notepad temp writes)
+
+Pushes updates to:
+```
+POST /update_from_b
+```
 
